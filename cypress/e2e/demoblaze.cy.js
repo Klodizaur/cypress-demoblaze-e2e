@@ -49,7 +49,7 @@ describe('Demoblaze Tests', () => {
         // Click the login button
         cy.get('button[onclick="logIn()"]').click();
   
-        // Verify login success by checking for the user's name or logout button
+        // Verify login success by checking for the user's name
         cy.get('#nameofuser', { timeout: 10000 }).should('be.visible');
       });
   
@@ -65,7 +65,7 @@ describe('Demoblaze Tests', () => {
       
         cy.get('button[onclick="logIn()"]').click();
       
-        // Verify login success
+        // Verify login success by checking for the logout button
         cy.get('a#logout2.nav-link').should('be.visible');
       
         // Navigate to the Samsung Galaxy S6 product page
